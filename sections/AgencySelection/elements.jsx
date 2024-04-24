@@ -26,6 +26,10 @@ export const StyledTextContainer = styled(({ ...props }) => <div {...props} />)`
 
 export const StyledVideoContainer = styled(({ ...props }) => <div {...props} />)`
   width: fit-content;
+
+  @media (max-width: 1024px) {
+    margin-bottom: 2rem;
+  }
 `;
 
 export const StyledOuterContainer = styled(({ ...props}) => <div {...props}/>)`
@@ -39,8 +43,20 @@ export const StyledInnerContainer = styled(({ ...props}) => <div {...props}/>)`
   display: flex;
   align-items: center;
   margin-left: 17rem;
+
+  @media (max-width: 1024px) {
+    margin: auto;
+    flex-direction: column;
+  }
 `;
 
 export const StyledSection = styled(({ ...props}) => <div {...props}/>)`
   margin-left: 3rem;
+
+  @media (max-width: 1024px) {
+    margin-left: 0;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
 `;
