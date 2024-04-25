@@ -2,9 +2,9 @@
 import Image from "next/image";
 import { StyledCard, StyledArticle, StyledTitle, Text } from "./elements";
 
-export const Card = ({ title, icon, children }) => {
+export const Card = ({ title, icon, size, children }) => {
     return (
-        <StyledCard>
+        <StyledCard size={size}>
             <Image src={icon.src} alt="Icon" width={icon.width} height={icon.height} />
 
             <StyledArticle>

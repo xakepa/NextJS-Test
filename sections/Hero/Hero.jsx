@@ -18,7 +18,7 @@ export const Hero = ({ image, title, description, ctaText, ...props }) => {
         <StyledTitle>{title}</StyledTitle>
         <StyledDescription>{description}</StyledDescription>
         <StyledCTAContainer>
-          <StyledGetStartedBtn><Link href="/agencyselection">{ctaText}</Link></StyledGetStartedBtn>
+        <Link href="/agencyselection"><StyledGetStartedBtn>{ctaText}</StyledGetStartedBtn></Link>
         </StyledCTAContainer>
       </StyledTextContainer>
       <StyledImageContainer>
