@@ -11,6 +11,9 @@ export const StyledCard = styled(({ ...props }) => <div {...props} />)`
     max-width: ${(props) => (props.size === 'small' ? '45%' : '55%')};
     border-radius: 10px;
     font-family: "Poppins", sans-serif;
+    border: 2px solid transparent;
+    transition: 0.2s ease-in-out;
+    
     :hover {
         border: 2px solid blue;
     }
