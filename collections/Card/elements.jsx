@@ -2,13 +2,12 @@ import styled from "styled-components";
 import { forwardRef } from "react";
 
 export const StyledCard = styled(({ ...props }) => <div {...props} />)`
-    background-color: #F1F1F1;
+    background-color: ${(props) => (props.bgcolor)};
+    max-width: ${(props) => props.size};
     display: flex;
     align-items: center;
-    padding: 1rem;
+    padding: .7rem;
     margin-bottom: 2rem;
-    width: ${(props) => (props.size === 'medium' ? '50%' : '55%')};
-    max-width: ${(props) => (props.size === 'small' ? '45%' : '55%')};
     border-radius: 10px;
     font-family: "Poppins", sans-serif;
     border: 2px solid transparent;
@@ -32,8 +31,11 @@ export const StyledTitle = styled(forwardRef((props, ref) => <h3 {...props} ref=
     }
 `
 
+export const StyledIcon = styled(({ ...props }) => <div {...props} />)`
+  padding: 0 1rem;
+`
+
 export const StyledArticle = styled(({ ...props }) => <div {...props} />)`
-    margin-left: 2rem;
 `
 
 export const Text = styled(forwardRef((props, ref) => <p {...props} ref={ref} />))`

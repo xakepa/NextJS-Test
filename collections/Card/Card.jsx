@@ -1,11 +1,14 @@
 // The Card to be exported goes here
 import Image from "next/image";
-import { StyledCard, StyledArticle, StyledTitle, Text } from "./elements";
+import { StyledCard, StyledArticle, StyledTitle, StyledIcon, Text } from "./elements";
 
-export const Card = ({ title, icon, size, children }) => {
+export const Card = ({ title, icon, size, bgcolor, children }) => {
     return (
-        <StyledCard size={size}>
-            <Image src={icon.src} alt="Icon" width={icon.width} height={icon.height} />
+        <StyledCard size={size} bgcolor={bgcolor}>
+            
+            <StyledIcon>
+                <Image src={icon.src} alt="Icon" width={40} height={40} layout="fixed"/>
+            </StyledIcon>
 
             <StyledArticle>
                 <StyledTitle>{title}</StyledTitle>
