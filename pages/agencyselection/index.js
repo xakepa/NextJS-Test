@@ -4,6 +4,7 @@ const agencyProps = {
   title: "Managed agency selection",
   description: "Stengthen your onboarding process",
   video: { src: 'video/sample.mp4', width: 300, height: 527 },
+  cardsToDisplay: 3,
   cards: [
     {
       bgcolor: "#F9F9F9",

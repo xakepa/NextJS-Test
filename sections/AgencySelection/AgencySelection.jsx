@@ -10,7 +10,7 @@ import {
     StyledSection
 } from "./elements";
 
-export const ManagedAgencySelection = ({ video, title, description, cardTitle, cardIcon, cardText, cards, ...props }) => {
+export const ManagedAgencySelection = ({ video, title, description, cardTitle, cardIcon, cardText, cards, cardsToDisplay, ...props }) => {
     return (
         <>
             <StyledContainer {...props}>
@@ -27,7 +27,7 @@ export const ManagedAgencySelection = ({ video, title, description, cardTitle, c
                     </StyledVideoContainer>
 
                     <StyledSection>
-                        {cards.map((cardData, index) => (
+                        {cards.slice(0, cardsToDisplay).map((cardData, index) => (
                             <Card
                                 key={index}
                                 bgcolor={cardData.bgcolor}
