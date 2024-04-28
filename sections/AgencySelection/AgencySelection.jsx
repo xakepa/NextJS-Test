@@ -10,7 +10,7 @@ import {
     StyledSection
 } from "./elements";
 
-export const ManagedAgencySelection = ({ video, title, description, cardTitle, cardIcon, cardText, ...props }) => {
+export const ManagedAgencySelection = ({ video, title, description, cardTitle, cardIcon, cardText, cards, ...props }) => {
     return (
         <>
             <StyledContainer {...props}>
@@ -27,9 +27,17 @@ export const ManagedAgencySelection = ({ video, title, description, cardTitle, c
                     </StyledVideoContainer>
 
                     <StyledSection>
-                        <Card bgcolor='#F9F9F9' size='50%' title='Brief' icon={{src: '/img/icon1.png'}} >Complete <b>brief writing or simple guidance</b> on what to include, we've got you covered.</Card>
-                        <Card bgcolor='#F4F4F4' size='53%' title='Search' icon={{src: '/img/icon2.png'}} >In-depth agency search covering; <b>criteria matching,</b> door knocking and due-dilligence vetting.</Card>
-                        <Card bgcolor='#F1F1F1' size='56%' title='Pitch' icon={{src: '/img/icon3.png'}}>Comprehensive <b>pitch management</b> including comms, diary managment and pitch hosting.</Card>
+                        {cards.map((cardData, index) => (
+                            <Card
+                                key={index}
+                                bgcolor={cardData.bgcolor}
+                                size={cardData.size}
+                                title={cardData.title}
+                                icon={cardData.icon}
+                            >
+                                {cardData.content} 
+                            </Card>
+                        ))}
                     </StyledSection>
                 </StyledInnerContainer>
             </StyledOuterContainer>

@@ -4,8 +4,30 @@ const agencyProps = {
   title: "Managed agency selection",
   description: "Stengthen your onboarding process",
   video: { src: 'video/sample.mp4', width: 300, height: 527 },
-};
-
+  cards: [
+    {
+      bgcolor: "#F9F9F9",
+      size: "50%",
+      title: "Brief",
+      icon: { src: "/img/icon1.png" },
+      content: "Complete <b>brief writing or simple guidance</b> on what to include, we've got you covered."
+    },
+    {
+      bgcolor: "#F4F4F4",
+      size: "53%",
+      title: "Brief",
+      icon: { src: "/img/icon1.png" },
+      content: "Complete <b>brief writing or simple guidance</b> on what to include, we've got you covered."
+    },
+    {
+      bgcolor: "#F1F1F1",
+      size: "56%",
+      title: "Brief",
+      icon: { src: "/img/icon1.png" },
+      content: "Complete <b>brief writing or simple guidance</b> on what to include, we've got you covered."
+    }
+  ]
+}
 export default function AgencySelection() {
   return (
     <>

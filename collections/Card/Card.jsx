@@ -13,7 +13,7 @@ export const Card = ({ title, icon, size, bgcolor, children }) => {
             <StyledArticle>
                 <StyledTitle>{title}</StyledTitle>
 
-                <Text>{children}</Text>
+                <div dangerouslySetInnerHTML={{ __html: children }} />
             </StyledArticle>
         </StyledCard>
     )
